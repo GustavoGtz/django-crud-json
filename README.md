@@ -1,37 +1,54 @@
 # django-crud-json
+## CRUD en Django utilizando JSON como base de datos
 
-CRUD en Django utilizando un archivo JSON como base de datos, implementado como parte de una entrevista de trabajo por parte de Radical Software.
+---
 
-Este proyecto fue desarrollado utilizando Python y el Framework Django. En lugar de una base de datos tradicional como MySQL o PostgreSQL, se emplea un archivo JSON como sistema de almacenamiento de datos. Esta implementación es no convencional, ya que Django normalmente trabaja con bases de datos SQL para manejar datos de manera eficiente. En este caso, el archivo JSON es utilizado como un almacenamiento simple y directo, que permite realizar operaciones básicas de CRUD.
+Este repositorio es una prueba técnica para el reclutamiento en Radical Software. Sin embargo, también resulta útil para aquellos interesados en desarrollar un prototipo de página web utilizando un archivo JSON en vez de una base de datos convencional.
+
+---
 
 ## Consideraciones
 
-- **Limitaciones del uso de JSON como base de datos:**
-  - **Falta de concurrencia:** Este enfoque no maneja el acceso simultáneo por múltiples usuarios, lo que podría generar conflictos.
-  - **Escalabilidad limitada:** Este método no es adecuado para manejar grandes volúmenes de datos debido a las limitaciones de rendimiento.
-  - **Eficiencia reducida:** Las operaciones de entrada y salida son más lentas comparadas con las bases de datos tradicionales.
-  
-Este enfoque fue implementado de manera no convencional para cumplir con los requisitos específicos de la entrevista, adaptándose a un caso donde se necesitaba interactuar con datos de manera ligera y rápida, sin la complejidad de un sistema de gestión de bases de datos tradicional.
+Es importante recalcar que este programa no pretende ser eficiente ni competitivo; solo es una prueba técnica y no se recomienda el uso de archivos JSON como base de datos en entornos de producción.
 
-Este enfoque se implementó principalmente con fines educativos y no está diseñado para aplicaciones de producción.
+El archivo JSON será editado continuamente durante la ejecución del programa. Por lo tanto, es recomendable guardar una copia de seguridad en caso de estar trabajando con archivos importantes. Además, los nombres de los campos dentro del JSON deben coincidir con los del programa para evitar problemas.
 
-## Pasos para ejecutar el programa:
+---
 
-1. **Clona este repositorio:**
-   ```bash
-   git clone <url-del-repositorio>
+## Uso del programa
 
+Para efectos prácticos, las versiones del software utilizado son:
+- Python 3.10.9
+- Django 4.2
 
-cd django-crud-json
-python -m venv env
-source env/bin/activate  # Para sistemas Unix
-env\Scripts\activate     # Para Windows
-pip install -r requirements.txt
+De preferencia, para correr este programa, utiliza el ambiente `.env` que se encuentra en el repositorio.
 
-python manage.py runserver
+### Pasos para ejecutar el proyecto:
 
-Notas adicionales
-Asegúrate de que el archivo JSON esté en el formato correcto y que los campos coincidan con los especificados en el código para evitar posibles conflictos al intentar acceder o modificar los datos.
-Este proyecto está diseñado para propósitos educativos y es una alternativa al uso convencional de bases de datos en Django.
-Para cualquier duda o consulta:
-Si tienes alguna pregunta sobre la implementación o necesitas más detalles, no dudes en contactar a [tu-email@dominio.com].
+1. Clona el repositorio a tu carpeta local utilizando Git:
+
+    ```bash
+    git clone <URL_DEL_REPOSITORIO>
+    ```
+
+2. Dentro de la consola de comandos (con el ambiente cargado), colócate en la ruta donde se encuentra el archivo `manage.py` y ejecuta el siguiente comando:
+
+    ```bash
+    python manage.py runserver
+    ```
+
+3. Ingresa a la ruta proporcionada por la consola (tu IP seguida de un puerto) y agrega el prefijo `/users` para acceder al sitio web. Es decir:
+
+    ```text
+    https://ooo.o.o.o:oooo/users
+    ```
+
+---
+
+## Acerca de este proyecto
+
+Este es un CRUD en Django utilizando un archivo JSON como base de datos, implementado como parte de una entrevista de trabajo por parte de Radical Software.
+
+---
+
+Si tienes alguna pregunta sobre la implementación o necesitas más detalles, no dudes en contactarme a [gustavogtznav@gmail.com](mailto:gustavogtznav@gmail.com).
