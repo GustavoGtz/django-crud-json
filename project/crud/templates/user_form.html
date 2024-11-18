@@ -2,7 +2,13 @@
 
 {% block content %}
 <div class="container mt-5">
-    <h2 class="mb-4">{{ user.id|default:"Agregar Nuevo Usuario" }}</h2>
+    <h2 class="mb-4">
+        {% if user.id %}
+            Actualizar los datos del usuario {{ user.id }}
+        {% else %}
+            Agregar Nuevo Usuario
+        {% endif %}
+    </h2>    
     <form method="POST" class="needs-validation" novalidate>
         {% csrf_token %}
         <div class="mb-3">
@@ -22,6 +28,10 @@
         </div>
         <button type="submit" class="btn btn-success">Guardar</button>
         <a href="{% url 'home' %}" class="btn btn-secondary">Cancelar</a>
+
+        {% if success_message %}
+        <p style="color: green;">{{ success_message }}</p>
+        {% endif %}
     </form>
 </div>
 

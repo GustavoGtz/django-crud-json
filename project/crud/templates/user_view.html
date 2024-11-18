@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">
+        {% if user.id %}
+            Visualizando los datos del usuario {{ user.id }}
+        {% else %}
+            Usuario no encontrado
+        {% endif %}
+    </h2>
+
+    <div class="mb-4">
+        <label for="name" class="form-label h5">Nombre</label>
+        <p id="name" class="form-control-plaintext bg-light p-2 rounded">{{ user.name|default:'No disponible' }}</p>
+    </div>
+    
+    <div class="mb-4">
+        <label for="email" class="form-label h5">Correo Electrónico</label>
+        <p id="email" class="form-control-plaintext bg-light p-2 rounded">{{ user.email|default:'No disponible' }}</p>
+    </div>
+    
+    <div class="mb-4">
+        <label for="phone" class="form-label h5">Teléfono</label>
+        <p id="phone" class="form-control-plaintext bg-light p-2 rounded">{{ user.phone|default:'No disponible' }}</p>
+    </div>
+    
+    <a href="{% url 'edit_user' user.id %}" class="btn btn-primary">Editar</a>
+    <a href="{% url 'home' %}" class="btn btn-secondary">Volver a la lista</a>
+
+</div>
+{% endblock %}
