@@ -50,11 +50,6 @@ De preferencia, para correr este programa, utiliza el ambiente `.env` que se enc
     ```
 
 ---
-
-## Acerca de este proyecto
-
-Este es un CRUD en Django utilizando un archivo JSON como base de datos, implementado como parte de una entrevista de trabajo por parte de Radical Software.
-
----
+## Contacto
 
 Si tienes alguna pregunta sobre la implementación o necesitas más detalles, no dudes en contactarme a [gustavogtznav@gmail.com](mailto:gustavogtznav@gmail.com).
