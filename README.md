@@ -28,16 +28,22 @@ De preferencia, para correr este programa, utiliza el ambiente `.env` que se enc
 1. Clona el repositorio a tu carpeta local utilizando Git:
 
     ```bash
-    git clone <URL_DEL_REPOSITORIO>
+    git clone https://github.com/GustavoGtz/django-crud-json.git
     ```
 
-2. Dentro de la consola de comandos (con el ambiente cargado), colócate en la ruta donde se encuentra el archivo `manage.py` y ejecuta el siguiente comando:
+    o con SSH
+
+    ```bash
+    git clone git@github.com:GustavoGtz/django-crud-json.git
+    ```
+
+3. Dentro de la consola de comandos (con el ambiente cargado), colócate en la ruta donde se encuentra el archivo `manage.py` y ejecuta el siguiente comando:
 
     ```bash
     python manage.py runserver
     ```
 
-3. Ingresa a la ruta proporcionada por la consola (tu IP seguida de un puerto) y agrega el prefijo `/users` para acceder al sitio web. Es decir:
+4. Ingresa a la ruta proporcionada por la consola (tu IP seguida de un puerto) y agrega el prefijo `/users` para acceder al sitio web. Es decir:
 
     ```text
     https://ooo.o.o.o:oooo/users
